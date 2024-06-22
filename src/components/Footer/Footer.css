@@ -1,0 +1,155 @@
+.footer {
+    background-color: var(--primary);
+    padding: 20px;
+    color: #F8F9FA;
+    padding-left: 190px;
+}
+  
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.1fr 1.5fr 0.1fr 0.2fr; /* Trois sections avec lignes verticales entre elles */
+    max-width: 1200px;
+    margin-left: 0px;
+    padding: 10px 0;
+    padding-left: 0px;
+    gap: 40px;
+}
+
+.footer-button {
+    background-color: var(--background);
+    color: #F8F9FA;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-button:hover {
+    background-color: #c44a00; /* Couleur principale légèrement plus foncée */
+    transform: scale(1.05);
+}
+
+.footer-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--light);
+}
+
+.description {
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 0;
+    color: white;
+    border-radius: 5px;
+    max-width: 550px;
+    text-align: left; /* Alignement du texte à gauche pour une meilleure lisibilité */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer-logo {
+    width: 70px;
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover {
+    filter: invert(17%) sepia(26%) saturate(2785%) hue-rotate(185deg) brightness(14%) contrast(100%);
+}
+
+.vertical-line {
+    border-right: 1px solid var(--background); /* Couleur et épaisseur de la ligne */
+    height: 100%; /* Hauteur de la ligne */
+    margin: auto 0;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+
+.footer-icons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligne les icônes en haut */
+    align-items: center; /* Centre les icônes horizontalement */
+    gap: 40px; /* Espacement entre les icônes */
+}
+
+.footer-icon {
+    font-size: 27px;
+    color: #F8F9FA;
+    transition: color 0.3s;
+}
+
+.footer-icon:hover {
+    color: var(--background); /* Couleur principale légèrement plus foncée */
+    cursor: pointer;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 20px; /* Moins d'espacement */
+        justify-items: center;
+    }
+
+    .footer-buttons {
+        flex-direction: row; /* Les aligner horizontalement */
+        justify-content: center;
+    }
+
+    .footer-icons {
+        flex-direction: row; /* Les aligner horizontalement */
+        justify-content: center;
+    }
+
+    .vertical-line {
+        display: none; /* Masquer la ligne verticale */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 20px; /* Moins d'espacement */
+    }
+
+    .footer-buttons, .footer-icons {
+        flex-direction: row; /* Les aligner horizontalement */
+        justify-content: center;
+    }
+
+    .vertical-line {
+        display: none; /* Masquer la ligne verticale */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        width: 50px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .footer-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .footer-icon {
+        font-size: 24px;
+    }
+}
